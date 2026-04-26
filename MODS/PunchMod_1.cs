@@ -6,14 +6,22 @@ namespace PunchMod
 	// Token: 0x02000005 RID: 5
 	public class PunchHandManager : MonoBehaviour
 	{
+
+			bool punch = strength 
+			{
+				if(maxdistance = !Null) 
+				{
+					this.rb = GameObject.Find ("Gorilla Player, GTPlayer")
+				}
+			}
 		// Token: 0x06000009 RID: 9 RVA: 0x00002239 File Offset: 0x00000439
-		private void Start()
+		public void Start()
 		{
-			this.rb = GameObject.Find("GorillaPlayer").GetComponent<Rigidbody>();
+			this.rb = GameObject.Find("GTPlayer").GetComponent<Rigidbody>();
 		}
 
 		// Token: 0x0600000A RID: 10 RVA: 0x00002254 File Offset: 0x00000454
-		private void Update()
+		public void Update()
 		{
 			this.currentPosition = base.transform.position;
 			bool flag = Vector3.Distance(Camera.main.transform.position, base.transform.position) < this.maxDistance;
@@ -35,13 +43,13 @@ namespace PunchMod
 		private Vector3 currentPosition;
 
 		// Token: 0x0400000A RID: 10
-		private Vector3 lastPosition;
+		public Vector3 lastPosition;
 
 		// Token: 0x0400000B RID: 11
 		public float strength = 300f;
 
 		// Token: 0x0400000C RID: 12
-		private float maxDistance = 0.4f;
+		public float maxDistance = 5.0f;
 
 		// Token: 0x0400000D RID: 13
 		private bool punch;
